@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocarlo2 <jocarlo2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jocavieira <jocavieira@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/17 19:46:48 by jocarlo2          #+#    #+#             */
-/*   Updated: 2026/01/18 13:51:58 by jocarlo2         ###   ########.fr       */
+/*   Updated: 2026/01/18 11:47:34 by jocavieira       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ static void	free_array(char **array)
 {
 	size_t	i;
 
+	i = 0;
 	if (!array)
 		return ;
 	while (array[i])

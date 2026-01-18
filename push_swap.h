@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocarlo2 <jocarlo2@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jocavieira <jocavieira@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/30 09:08:52 by jocavieira        #+#    #+#             */
-/*   Updated: 2026/01/18 13:12:59 by jocarlo2         ###   ########.fr       */
+/*   Updated: 2026/01/18 11:46:37 by jocavieira       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ char				**ft_split(char const *s, char c);
 t_node				*new_node(int value);
 void				init_stack(t_stack *stack);
 void				add_bottom(t_stack *stack, t_node *node);
-void				add_top(t_stack *stack, t_node *node);
 void				free_stack(t_stack *stack);
 // indexing and positioning functions
 void				index_stack(t_stack *stack);
