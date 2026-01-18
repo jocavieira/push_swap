@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jocavieira <jocavieira@student.42.fr>      +#+  +:+       +#+         #
+#    By: jocarlo2 <jocarlo2@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/13 13:28:36 by jocavieira        #+#    #+#              #
-#    Updated: 2026/01/14 06:53:31 by jocavieira       ###   ########.fr        #
+#    Updated: 2026/01/18 13:18:07 by jocarlo2         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@
 NAME = push_swap
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 SRC = push_swap.c \
       parse.c \

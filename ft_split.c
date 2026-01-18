@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocavieira <jocavieira@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jocarlo2 <jocarlo2@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/14 06:39:36 by jocavieira        #+#    #+#             */
-/*   Updated: 2026/01/14 06:39:41 by jocavieira       ###   ########.fr       */
+/*   Created: 2026/01/17 19:46:48 by jocarlo2          #+#    #+#             */
+/*   Updated: 2026/01/18 13:51:58 by jocarlo2         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 static int	count_word(const char *s, char c)
 {
@@ -56,14 +55,26 @@ static char	*extract_word(const char *s, char c)
 	return (word);
 }
 
+static void	free_array(char **array)
+{
+	size_t	i;
+
+	if (!array)
+		return ;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+	array = NULL;
+}
+
 static int	check_malloc(char **strings, int i, const char *s, char c)
 {
 	strings[i] = extract_word(s, c);
 	if (!strings[i])
 	{
-		while (i--)
-			free(strings[i]);
-		free(strings);
 		return (0);
 	}
 	return (1);
@@ -85,7 +96,7 @@ char	**ft_split(char const *s, char c)
 		if (*s)
 		{
 			if (!check_malloc(strings, i, s, c))
-				return (NULL);
+				return (free_array(strings), NULL);
 			i++;
 			while (*s && *s != c)
 				s++;
